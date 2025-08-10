@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>💰 Insurance Charges Predictor - Ridge Regression</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #283c86, #45a247);
+            color: white;
+            text-align: center;
+            padding: 40px;
+        }
+        form {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 15px;
+            display: inline-block;
+        }
+        input, select {
+            margin: 5px;
+            padding: 10px;
+            width: 300px;
+            border: none;
+            border-radius: 10px;
+        }
+        button {
+            background: #ff9800;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            font-size: 1rem;
+            margin-top: 10px;
+        }
+        button:hover {
+            background: #e68a00;
+        }
+        .result {
+            margin-top: 20px;
+            font-size: 1.5rem;
+            background: rgba(0, 0, 0, 0.2);
+            padding: 15px;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>💰 Insurance Charges Predictor (Ridge Regression)</h1>
+    <form method="POST">
+        <input type="number" step="1" name="age" placeholder="Age (e.g., 35)" required><br>
+        <input type="number" step="0.1" name="bmi" placeholder="BMI (e.g., 27.5)" required><br>
+        <input type="number" step="1" name="children" placeholder="Number of Children (e.g., 2)" required><br>
+        <select name="smoker" required>
+            <option value="">Smoker?</option>
+            <option value="yes">Yes</option>
+            <option value="no">No</option>
+        </select><br>
+        <select name="region" required>
+            <option value="">Region</option>
+            <option value="southwest">Southwest</option>
+            <option value="southeast">Southeast</option>
+            <option value="northwest">Northwest</option>
+            <option value="northeast">Northeast</option>
+        </select><br>
+        <button type="submit">Predict Charges</button>
+    </form>
+
+    {% if prediction is not none %}
+        <div class="result">
+            {% if prediction == 'Invalid input' %}
+                ❌ {{ prediction }}
+            {% else %}
+                📊 Predicted Charges: 💵 ${{ prediction }}
+            {% endif %}
+        </div>
+    {% endif %}
+</body>
+</html>
