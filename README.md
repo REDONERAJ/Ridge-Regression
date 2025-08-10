@@ -100,6 +100,9 @@ http://127.0.0.1:5000/
 ---
 
 ## Screenshots
+<img width="1366" height="633" alt="Screenshot 2025-08-10 183801" src="https://github.com/user-attachments/assets/54f53d2e-966b-45b9-bf2e-a0ec56a21f6d" />
+<img width="1366" height="644" alt="Screenshot 2025-08-10 183842" src="https://github.com/user-attachments/assets/6092a879-9be4-4a4b-a81e-438a036a6694" />
+<img width="1366" height="633" alt="Screenshot 2025-08-10 183853" src="https://github.com/user-attachments/assets/4509d874-dc1d-4f70-b605-45a13455be49" />
 
 
 
